@@ -1,0 +1,277 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+    border-radius: 0px !important;
+}
+
+.body-wrap {
+    min-height: 100%;
+    margin: 0;
+    min-width: 100%;
+    position: relative;
+    background: #f8f8f8;
+    overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+    .body-wrap > .container {
+        padding: 50px;
+    }
+
+    .right-only-border {
+        border-right: dotted 1px #BDBDBD;
+    }
+}
+
+#affixSearch.affix {
+    top: 0px;
+    left: 0px;
+}
+
+nav li:hover {
+    background-color: rgba(0, 0, 0, 0.28);
+    color: white;
+}
+
+nav li a:hover {
+    color: white !important;
+}
+
+nav li:after {
+    content: "";
+    height: 5px;
+    width: 0;
+    background-color: #FEBF01;
+    z-index: 999999;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transition: all 0.2s ease-out;
+}
+
+nav li:hover:after {
+    width: 100%;
+    left: 0px;
+}
+
+/*=============ANIMATE ANGULAR ====================*/
+.animate-scale.ng-enter,
+.animate-scale.ng-leave {
+    -webkit-transition: 400ms all;
+    -moz-transition: 400ms all;
+    -ms-transition: 400ms all;
+    -o-transition: 400ms all;
+    transition: 400ms all;
+}
+
+.animate-scale.ng-leave.animate-scale.ng-leave-active,
+.animate-scale.ng-enter {
+    opacity: 0;
+}
+
+.animate-scale.ng-enter.animate-scale.ng-enter-active,
+.animate-scale.ng-leave {
+    opacity: 1;
+}
+
+/*================== ng Animations =================*/
+
+.overlay-outer.ng-hide-add {
+    -webkit-animation: lightSpeedOut 1s;
+    -o-animation: lightSpeedOut 1s;
+    animation: lightSpeedOut 1s;
+}
+
+.overlay-outer.ng-hide-remove {
+    -webkit-animation: tada 1s;
+    -o-animation: tada 1;
+    animation: bounceInUp 1s;
+}
+
+.view-animatie.ng-enter {
+    -webkit-animation: bounceInUp 1s;
+    -o-animation: bounceInUp 1s;
+    animation: bounceInUp 2s;
+}
+
+.view-animatie.ng-leave {
+    -webkit-animation: bounceOutRight 1s;
+    -o-animation: bounceOutRight 1s;
+    animation: bounceOutRight 1s;
+    height: 0;
+    overflow: visible;
+}
+
+/*================== ng Animations =================*/
+
+td.compress {
+    height: 5em !important;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+tr:hover td.compress {
+    display: table-cell;
+    width: auto;
+}
+
+.overlay-outer {
+    background-color: rgba(0, 0, 0, 0.77);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: block;
+    top: 0px;
+    left: 0px;
+    z-index: 999999;
+}
+
+@media (max-width: 768px) {
+
+    .popup {
+        width: 600px;
+        max-width: 100%;
+        min-width: 50%;
+        margin: 0px auto;
+        position: relative;
+        top: 0px;
+        height: 400px;
+        max-height: 100%;
+        overflow-y: scroll;
+        box-shadow: 0px 0px 3px 3px #004978;
+    }
+}
+
+@media (min-width: 768px) {
+    .popup {
+        width: 600px;
+        max-width: 100%;
+        min-width: 50%;
+        margin: 0px auto;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        box-shadow: 0px 0px 3px 3px #004978;
+    }
+}
+
+.compress ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.popup ul {
+    list-style: none;
+}
+
+.jsonFormat ul:before {
+    content: "{";
+    margin-left: -5px;
+    font-weight: bold;
+    color: #1EC21E;
+}
+
+.jsonFormat ul:after {
+    content: "}";
+    margin-left: 0px;
+    font-weight: bold;
+    color: #1EC21E;
+}
+
+.large-form .form-control {
+    margin: 10px 5px;
+}
+
+ul.list-inline li {
+    margin: 5px 10px;
+    background-color: rgb(246, 246, 246);
+    padding: 5px;
+}
+
+ul.famous-routes li {
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    background-color: #9F7DCE;
+    color: #FEBF01;
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 65px;
+    font-family: sans-serif;
+    line-height: 40px;
+    border: solid 5px white;
+}
+
+ul.famous-routes {
+    padding: 10px;
+    margin: -5px;
+}
+
+span.icons {
+    display: inline-block;
+    width: 30%;
+    color: #7E63A3;
+    font-weight: bold;
+    vertical-align: top;
+    font-size: 13px;
+}
+
+.navbar-brandz img {
+    margin: 0px;
+    padding: 10px;
+    height: 65px;
+}
+
+ul.famous-routes li.running {
+    border: solid 5px #FFC000;
+    color: white;
+    box-shadow: 0px 3px 6px 0px #9F7DCE;
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+    box-shadow: 0px 0px 15px grey;
+}
+
+.container {
+    max-width: 100% !important;
+}
+
+html {
+    background: #ffffff;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #FFC000;
+}
+
+.navbar-inverse button.navbar-toggle:hover {
+    background-color: #FFC000;
+}
+
+p.para {
+    line-height: 1.5;
+}
+
+strong {
+    font-weight: bold;
+    color: #FF9C00;
+    font-style: italic;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    padding: 22px 10px;
+    font-size: 13px;
+}
